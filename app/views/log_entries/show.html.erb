@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Technician:</strong>
+  <%= @log_entry.technician %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @log_entry.date %>
+</p>
+
+<p>
+  <strong>Aircraft:</strong>
+  <%= @log_entry.aircraft %>
+</p>
+
+<p>
+  <strong>Engine:</strong>
+  <%= @log_entry.engine %>
+</p>
+
+<p>
+  <strong>Components:</strong>
+  <%= @log_entry.components %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @log_entry.description %>
+</p>
+
+<p>
+  <strong>Repairman:</strong>
+  <%= @log_entry.repairman %>
+</p>
+
+<p>
+  <strong>Amt:</strong>
+  <%= @log_entry.amt %>
+</p>
+
+<p>
+  <strong>Ir ra:</strong>
+  <%= @log_entry.ir_ra %>
+</p>
+
+<p>
+  <strong>Ia ai:</strong>
+  <%= @log_entry.ia_ai %>
+</p>
+
+<p>
+  <strong>Ia pi:</strong>
+  <%= @log_entry.ia_pi %>
+</p>
+
+<p>
+  <strong>Maint time small:</strong>
+  <%= @log_entry.maint_time_small %>
+</p>
+
+<p>
+  <strong>Maint time large:</strong>
+  <%= @log_entry.maint_time_large %>
+</p>
+
+<p>
+  <strong>Supervisor:</strong>
+  <%= @log_entry.supervisor %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @log_entry.client %>
+</p>
+
+<p>
+  <strong>Work location:</strong>
+  <%= @log_entry.work_location %>
+</p>
+
+<p>
+  <strong>Jasc:</strong>
+  <%= @log_entry.jasc %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= @log_entry.attachment %>
+</p>
+
+<p>
+  <strong>Custom cat:</strong>
+  <%= @log_entry.custom_cat %>
+</p>
+
+<%= link_to 'Edit', edit_log_entry_path(@log_entry) %> |
+<%= link_to 'Back', log_entries_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110165300) do
+ActiveRecord::Schema.define(version: 20171110183343) do
 
   create_table "ac_make_models", force: :cascade do |t|
     t.string "abbreviation"

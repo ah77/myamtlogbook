@@ -1,0 +1,112 @@
+<%= form_with(model: log_entry, local: true) do |form| %>
+  <% if log_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(log_entry.errors.count, "error") %> prohibited this log_entry from being saved:</h2>
+
+      <ul>
+      <% log_entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :technician_id %>
+    <%= form.text_field :technician_id, id: :log_entry_technician_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :log_entry_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aircraft_id %>
+    <%= form.text_field :aircraft_id, id: :log_entry_aircraft_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :engine_id %>
+    <%= form.text_field :engine_id, id: :log_entry_engine_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :components %>
+    <%= form.text_field :components, id: :log_entry_components %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :log_entry_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repairman %>
+    <%= form.check_box :repairman, id: :log_entry_repairman %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amt %>
+    <%= form.check_box :amt, id: :log_entry_amt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ir_ra %>
+    <%= form.check_box :ir_ra, id: :log_entry_ir_ra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ia_ai %>
+    <%= form.check_box :ia_ai, id: :log_entry_ia_ai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ia_pi %>
+    <%= form.check_box :ia_pi, id: :log_entry_ia_pi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maint_time_small %>
+    <%= form.text_field :maint_time_small, id: :log_entry_maint_time_small %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maint_time_large %>
+    <%= form.text_field :maint_time_large, id: :log_entry_maint_time_large %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supervisor_id %>
+    <%= form.text_field :supervisor_id, id: :log_entry_supervisor_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.text_field :client_id, id: :log_entry_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_location_id %>
+    <%= form.text_field :work_location_id, id: :log_entry_work_location_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jasc %>
+    <%= form.text_field :jasc, id: :log_entry_jasc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attachment %>
+    <%= form.text_field :attachment, id: :log_entry_attachment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :custom_cat_id %>
+    <%= form.text_field :custom_cat_id, id: :log_entry_custom_cat_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

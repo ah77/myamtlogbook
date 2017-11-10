@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Log Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Technician</th>
+      <th>Date</th>
+      <th>Aircraft</th>
+      <th>Engine</th>
+      <th>Components</th>
+      <th>Description</th>
+      <th>Repairman</th>
+      <th>Amt</th>
+      <th>Ir ra</th>
+      <th>Ia ai</th>
+      <th>Ia pi</th>
+      <th>Maint time small</th>
+      <th>Maint time large</th>
+      <th>Supervisor</th>
+      <th>Client</th>
+      <th>Work location</th>
+      <th>Jasc</th>
+      <th>Attachment</th>
+      <th>Custom cat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @log_entries.each do |log_entry| %>
+      <tr>
+        <td><%= log_entry.technician %></td>
+        <td><%= log_entry.date %></td>
+        <td><%= log_entry.aircraft %></td>
+        <td><%= log_entry.engine %></td>
+        <td><%= log_entry.components %></td>
+        <td><%= log_entry.description %></td>
+        <td><%= log_entry.repairman %></td>
+        <td><%= log_entry.amt %></td>
+        <td><%= log_entry.ir_ra %></td>
+        <td><%= log_entry.ia_ai %></td>
+        <td><%= log_entry.ia_pi %></td>
+        <td><%= log_entry.maint_time_small %></td>
+        <td><%= log_entry.maint_time_large %></td>
+        <td><%= log_entry.supervisor %></td>
+        <td><%= log_entry.client %></td>
+        <td><%= log_entry.work_location %></td>
+        <td><%= log_entry.jasc %></td>
+        <td><%= log_entry.attachment %></td>
+        <td><%= log_entry.custom_cat %></td>
+        <td><%= link_to 'Show', log_entry %></td>
+        <td><%= link_to 'Edit', edit_log_entry_path(log_entry) %></td>
+        <td><%= link_to 'Destroy', log_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log Entry', new_log_entry_path %>

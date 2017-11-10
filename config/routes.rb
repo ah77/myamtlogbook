@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :log_entries
   resources :custom_cats
   resources :work_locations
   resources :clients

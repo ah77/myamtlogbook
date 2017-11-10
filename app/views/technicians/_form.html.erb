@@ -1,0 +1,52 @@
+<%= form_with(model: technician, local: true) do |form| %>
+  <% if technician.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(technician.errors.count, "error") %> prohibited this technician from being saved:</h2>
+
+      <ul>
+      <% technician.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :technician_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username, id: :technician_username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :technician_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, id: :technician_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, id: :technician_password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :certificate_number %>
+    <%= form.text_field :certificate_number, id: :technician_certificate_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :certificate_type %>
+    <%= form.text_field :certificate_type, id: :technician_certificate_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

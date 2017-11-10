@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @ac_make_model.abbreviation %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @ac_make_model.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @ac_make_model.model %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @ac_make_model.family %>
+</p>
+
+<%= link_to 'Edit', edit_ac_make_model_path(@ac_make_model) %> |
+<%= link_to 'Back', ac_make_models_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  n_number: MyString
+  serial_number: MyString
+  ac_make_model: one
+  notes: MyText
+
+two:
+  n_number: MyString
+  serial_number: MyString
+  ac_make_model: two
+  notes: MyText

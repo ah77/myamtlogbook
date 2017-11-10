@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109202739) do
+ActiveRecord::Schema.define(version: 20171110161604) do
 
   create_table "ac_make_models", force: :cascade do |t|
     t.string "abbreviation"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20171109202739) do
     t.datetime "updated_at", null: false
     t.index ["ac_make_model_id"], name: "index_aircrafts_on_ac_make_model_id"
     t.index ["n_number"], name: "index_aircrafts_on_n_number", unique: true
-    t.index ["serial_number"], name: "index_aircrafts_on_serial_number", unique: true
   end
 
   create_table "engines", force: :cascade do |t|
@@ -45,7 +44,6 @@ ActiveRecord::Schema.define(version: 20171109202739) do
     t.datetime "updated_at", null: false
     t.index ["aircraft_id"], name: "index_engines_on_aircraft_id"
     t.index ["name"], name: "index_engines_on_name", unique: true
-    t.index ["serial_number"], name: "index_engines_on_serial_number", unique: true
   end
 
   create_table "technicians", force: :cascade do |t|

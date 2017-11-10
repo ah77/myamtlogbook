@@ -23,7 +23,7 @@
         <td><%= engine.manufacturer %></td>
         <td><%= engine.model %></td>
         <td><%= engine.notes %></td>
-        <td><%= engine.aircraft %></td>
+        <td><%= engine.aircraft.n_number %></td>
         <td><%= link_to 'Show', engine %></td>
         <td><%= link_to 'Edit', edit_engine_path(engine) %></td>
         <td><%= link_to 'Destroy', engine, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :custom_cats
+  resources :work_locations
+  resources :clients
+  resources :supervisors
   resources :engines
   resources :aircrafts
   resources :ac_make_models

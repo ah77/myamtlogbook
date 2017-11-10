@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110161604) do
+ActiveRecord::Schema.define(version: 20171110165300) do
 
   create_table "ac_make_models", force: :cascade do |t|
     t.string "abbreviation"
@@ -33,6 +33,22 @@ ActiveRecord::Schema.define(version: 20171110161604) do
     t.index ["n_number"], name: "index_aircrafts_on_n_number", unique: true
   end
 
+  create_table "clients", force: :cascade do |t|
+    t.string "company_name"
+    t.string "contact_name"
+    t.text "notes"
+    t.text "contact_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_cats", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "engines", force: :cascade do |t|
     t.string "name"
     t.string "serial_number"
@@ -46,6 +62,43 @@ ActiveRecord::Schema.define(version: 20171110161604) do
     t.index ["name"], name: "index_engines_on_name", unique: true
   end
 
+  create_table "log_entries", force: :cascade do |t|
+    t.integer "technician_id"
+    t.date "date"
+    t.integer "aircraft_id"
+    t.integer "engine_id"
+    t.string "components"
+    t.text "description"
+    t.boolean "repairman"
+    t.boolean "amt"
+    t.boolean "ir_ra"
+    t.boolean "ia_ai"
+    t.boolean "ia_pi"
+    t.decimal "maint_time_small", precision: 7, scale: 2
+    t.decimal "maint_time_large", precision: 7, scale: 2
+    t.integer "supervisor_id"
+    t.integer "client_id"
+    t.integer "work_location_id"
+    t.integer "jasc"
+    t.string "attachment"
+    t.integer "custom_cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aircraft_id"], name: "index_log_entries_on_aircraft_id"
+    t.index ["client_id"], name: "index_log_entries_on_client_id"
+    t.index ["custom_cat_id"], name: "index_log_entries_on_custom_cat_id"
+    t.index ["engine_id"], name: "index_log_entries_on_engine_id"
+    t.index ["supervisor_id"], name: "index_log_entries_on_supervisor_id"
+    t.index ["technician_id"], name: "index_log_entries_on_technician_id"
+    t.index ["work_location_id"], name: "index_log_entries_on_work_location_id"
+  end
+
+  create_table "supervisors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "technicians", force: :cascade do |t|
     t.string "name"
     t.string "username"
@@ -57,6 +110,13 @@ ActiveRecord::Schema.define(version: 20171110161604) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_technicians_on_email", unique: true
     t.index ["username"], name: "index_technicians_on_username", unique: true
+  end
+
+  create_table "work_locations", force: :cascade do |t|
+    t.string "description"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

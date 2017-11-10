@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  technician: one
+  date: 2017-11-10
+  aircraft: one
+  engine: one
+  components: MyString
+  description: MyText
+  repairman: false
+  amt: false
+  ir_ra: false
+  ia_ai: false
+  ia_pi: false
+  maint_time_small: 9.99
+  maint_time_large: 9.99
+  supervisor: one
+  client: one
+  work_location: one
+  jasc: 
+  attachment: MyString
+  custom_cat: one
+
+two:
+  technician: two
+  date: 2017-11-10
+  aircraft: two
+  engine: two
+  components: MyString
+  description: MyText
+  repairman: false
+  amt: false
+  ir_ra: false
+  ia_ai: false
+  ia_pi: false
+  maint_time_small: 9.99
+  maint_time_large: 9.99
+  supervisor: two
+  client: two
+  work_location: two
+  jasc: 
+  attachment: MyString
+  custom_cat: two

@@ -1,0 +1,2 @@
+class CustomCat < ApplicationRecord
+end

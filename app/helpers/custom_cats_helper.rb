@@ -1,0 +1,2 @@
+module CustomCatsHelper
+end

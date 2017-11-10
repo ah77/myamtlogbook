@@ -18,7 +18,7 @@
       <tr>
         <td><%= aircraft.n_number %></td>
         <td><%= aircraft.serial_number %></td>
-        <td><%= aircraft.ac_make_model %></td>
+        <td><%= aircraft.ac_make_model.abbreviation %></td>
         <td><%= aircraft.notes %></td>
         <td><%= link_to 'Show', aircraft %></td>
         <td><%= link_to 'Edit', edit_aircraft_path(aircraft) %></td>

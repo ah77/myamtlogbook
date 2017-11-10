@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Custom Cats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custom_cats.each do |custom_cat| %>
+      <tr>
+        <td><%= custom_cat.name %></td>
+        <td><%= custom_cat.description %></td>
+        <td><%= link_to 'Show', custom_cat %></td>
+        <td><%= link_to 'Edit', edit_custom_cat_path(custom_cat) %></td>
+        <td><%= link_to 'Destroy', custom_cat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom Cat', new_custom_cat_path %>

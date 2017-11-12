@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'pages#index'
+
+  get 'pages/index'
+
   resources :log_entries
   resources :custom_cats
   resources :work_locations
